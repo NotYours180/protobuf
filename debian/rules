@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --parallel --with autoreconf
+
+override_dh_auto_build-arch:
+	dh_auto_build --arch
+
+override_dh_auto_build-indep:
+	dh_auto_build --indep
+
+override_dh_auto_install-arch:
+	dh_auto_install --arch
+
+override_dh_auto_install-indep:
+	dh_auto_install --indep
+
+override_dh_install:
+	dh_install
+
+	# Remove compiler headers from libprotobuf-dev.
+	rm -rf $(CURDIR)/debian/libprotobuf-dev/usr/include/google/protobuf/compiler
