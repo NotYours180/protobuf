@@ -1,8 +1,8 @@
 Source: protobuf
 Section: devel
 Priority: optional
-Maintainer: Robert Edmonds <edmonds@debian.org>
-Uploaders: Iustin Pop <iustin@debian.org>
+Maintainer: Andres Calderon <andres.calderon@admobilize.com>
+Uploaders: Kevin Patino <kevin.patino@admobilize.com>
 Build-Depends:
 # Debian build system
  dpkg-dev (>= 1.16.1~)
